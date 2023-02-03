@@ -183,7 +183,37 @@ public class MainActivity extends AppCompatActivity {
 
             if(checkPlayerWin()){
 
+
+                WinDialog winDialog = new WinDialog(MainActivity.this, playerOneName.getText().toString() + " has won the match", MainActivity.this);
+                winDialog.show();
+
             }
+
+            else if(totalSelectedBoxes == 9){
+
+                WinDialog winDialog = new WinDialog(MainActivity.this, "It is a draw", MainActivity.this);
+                winDialog.show();
+
+
+            }
+
+            else{
+
+            }
+
+
+        }
+
+    }
+
+
+    private void changePlayerTurn(int currentPlayerTurn){
+        playerTurn = currentPlayerTurn;
+
+        if(playerTurn == 1){
+            playerOneLayout.setBackgroundResource(R.drawable.round_black_blue_border);
+            playerTwoLayout.setBackgroundResource(R.drawable.round_back_dark_blue);
+
 
 
         }
@@ -198,15 +228,14 @@ public class MainActivity extends AppCompatActivity {
 
             final int [] combination = combinationList.get(i);
 
-            if(boxPositions[combination[0] == playerTurn && boxPositions[1] == playerTurn && boxPositions[combination[2]] == playerTurn ){
+            if(boxPositions[combination[0]] == playerTurn && boxPositions[1] == playerTurn && boxPositions[combination[2]] == playerTurn){
                response = true;
             }
-
-            return response;
 
         }
 
 
+        return response;
     }
 
 
