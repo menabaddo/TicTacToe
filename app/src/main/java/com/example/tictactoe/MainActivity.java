@@ -63,6 +63,94 @@ public class MainActivity extends AppCompatActivity {
         playerTwoName.setText(getPlayerTwoName);
 
 
+        image1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                if (isBoxSelectable(0)) {
+
+
+                }
+
+            }
+        });
+
+        image2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (isBoxSelectable(1)) {
+
+                }
+
+            }
+        });
+
+        image3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isBoxSelectable(2)) {
+
+                }
+            }
+        });
+
+        image4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isBoxSelectable(3)) {
+
+                }
+            }
+        });
+
+        image5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isBoxSelectable(4)){
+
+                }
+            }
+        });
+
+        image6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isBoxSelectable(5)){
+
+                }
+            }
+        });
+
+        image7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isBoxSelectable(6)){
+
+                }
+            }
+        });
+
+        image8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isBoxSelectable(7)){
+
+                }
+            }
+        });
+
+        image9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isBoxSelectable(8)){
+
+                }
+            }
+        });
+
+
 
        playerOneLayout.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -82,5 +170,53 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private void performAction(ImageView imageView, int selectedBoxPosition){
+
+        boxPositions[selectedBoxPosition] = playerTurn;
+
+        if(playerTurn == 1){
+
+            imageView.setImageResource(R.drawable.x);
+
+
+            if(checkPlayerWin()){
+
+            }
+
+
+        }
+
+    }
+
+    private boolean checkPlayerWin(){
+
+        boolean response = false;
+
+        for(int i =0; i<combinationList.size(); i++){
+
+            final int [] combination = combinationList.get(i);
+
+            if(boxPositions[combination[0] == playerTurn && boxPositions[1] == playerTurn && boxPositions[combination[2]] == playerTurn ){
+               response = true;
+            }
+
+            return response;
+
+        }
+
+
+    }
+
+
+    private Boolean isBoxSelectable(int boxPosition){
+        boolean response = false;
+
+        if(boxPositions[boxPosition] == 0){
+            response = true;
+        }
+
+        return  response;
     }
 }
