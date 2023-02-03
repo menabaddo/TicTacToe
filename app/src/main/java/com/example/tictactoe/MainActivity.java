@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if (isBoxSelectable(0)) {
+                    performAction((ImageView)view, 0);
 
 
                 }
@@ -82,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if (isBoxSelectable(1)) {
 
+                    performAction((ImageView)view, 1);
+
                 }
 
             }
@@ -91,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isBoxSelectable(2)) {
+                    performAction((ImageView)view, 2);
 
                 }
             }
@@ -100,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isBoxSelectable(3)) {
+                    performAction((ImageView)view, 3;
 
                 }
             }
@@ -110,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(isBoxSelectable(4)){
 
+                    performAction((ImageView)view, 4);
+
                 }
             }
         });
@@ -118,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(5)){
+                    performAction((ImageView)view, 5);
+
 
                 }
             }
@@ -127,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(6)){
+                    performAction((ImageView)view, 6);
 
                 }
             }
@@ -136,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(7)){
-
+                    performAction((ImageView)view, 7);
                 }
             }
         });
@@ -145,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(isBoxSelectable(8)){
+
+                    performAction((ImageView)view, 8);
 
                 }
             }
