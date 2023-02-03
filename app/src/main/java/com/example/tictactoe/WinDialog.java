@@ -13,6 +13,8 @@ public class WinDialog extends Dialog {
     private final MainActivity mainActivity;
     public WinDialog(@NonNull Context context, String message, MainActivity mainActivity) {
         super(context);
+        this.message = message;
+        this.mainActivity = mainActivity;
     }
 
     @Override
