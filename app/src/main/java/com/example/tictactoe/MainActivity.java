@@ -14,8 +14,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     private final List<int[]> combinationList = new ArrayList<>();
-
-    private int [] boxPositions =
+    private int [] boxPositions = {0,0,0,0,0,0,0,0,0};
+    private int playerTurn = 1;
+    private int totalSelectedBoxes = 1;
+    private LinearLayout playerOneLayout, playerTwoLayout;
+    private TextView playerOneName, playerTwoName;
+    private ImageView image1, image2, image3, image4, image5, image6, image7, image8, image9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
