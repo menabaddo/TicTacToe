@@ -37,6 +37,9 @@ public class WinDialog extends Dialog {
             @Override
             public void onClick(View view) {
 
+                mainActivity.restartMatch();
+                dismiss();
+
             }
         });
 

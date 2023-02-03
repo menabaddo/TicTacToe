@@ -185,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 WinDialog winDialog = new WinDialog(MainActivity.this, playerOneName.getText().toString() + " has won the match", MainActivity.this);
+                winDialog.setCancelable(false);
                 winDialog.show();
 
             }
@@ -192,6 +193,7 @@ public class MainActivity extends AppCompatActivity {
             else if(totalSelectedBoxes == 9){
 
                 WinDialog winDialog = new WinDialog(MainActivity.this, "It is a draw", MainActivity.this);
+                winDialog.setCancelable(false);
                 winDialog.show();
 
 
@@ -199,8 +201,41 @@ public class MainActivity extends AppCompatActivity {
 
             else{
 
+                changePlayerTurn(2);
+
+                totalSelectedBoxes++;
+
+
             }
 
+
+        }
+
+        else{
+
+            imageView.setImageResource(R.drawable.o);
+
+            if(checkPlayerWin()){
+
+                WinDialog winDialog = new WinDialog(MainActivity.this, playerTwoName.getText().toString() + " has won the match", MainActivity.this);
+                winDialog.setCancelable(false);
+                winDialog.show();
+
+            }
+
+            else if(selectedBoxPosition == 9){
+
+                WinDialog winDialog = new WinDialog(MainActivity.this, "It is a draw", MainActivity.this);
+                winDialog.setCancelable(false);
+                winDialog.show();
+
+            }
+            else{
+
+                changePlayerTurn(1);
+                totalSelectedBoxes++;
+
+            }
 
         }
 
@@ -215,6 +250,13 @@ public class MainActivity extends AppCompatActivity {
             playerTwoLayout.setBackgroundResource(R.drawable.round_back_dark_blue);
 
 
+
+        }
+
+        else{
+
+            playerTwoLayout.setBackgroundResource(R.drawable.round_black_blue_border);
+            playerOneLayout.setBackgroundResource(R.drawable.round_back_dark_blue);
 
         }
 
@@ -248,4 +290,31 @@ public class MainActivity extends AppCompatActivity {
 
         return  response;
     }
+
+        public void restartMatch(){
+
+
+        boxPositions = new int[]{0,0,0,0,0,0,0,0,0};
+
+        playerTurn = 1;
+
+        totalSelectedBoxes = 1;
+
+             image1.setImageResource(R.drawable.test);
+            image2.setImageResource(R.drawable.test);
+            image3.setImageResource(R.drawable.test);
+            image4.setImageResource(R.drawable.test);
+            image5.setImageResource(R.drawable.test);
+            image6.setImageResource(R.drawable.test);
+            image7.setImageResource(R.drawable.test);
+            image8.setImageResource(R.drawable.test);
+            image9.setImageResource(R.drawable.test);
+
+
+
+
+
+
+        }
+
 }
