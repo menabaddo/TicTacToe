@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isBoxSelectable(3)) {
-                    performAction((ImageView)view, 3;
+                    performAction((ImageView)view, 3);
 
                 }
             }
@@ -282,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
 
             final int [] combination = combinationList.get(i);
 
-            if(boxPositions[combination[0]] == playerTurn && boxPositions[1] == playerTurn && boxPositions[combination[2]] == playerTurn){
+            if(boxPositions[combination[0]] == playerTurn && boxPositions[combination[1]] == playerTurn && boxPositions[combination[2]] == playerTurn){
                response = true;
             }
 

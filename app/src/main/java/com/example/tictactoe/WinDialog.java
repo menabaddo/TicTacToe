@@ -11,7 +11,8 @@ import androidx.annotation.NonNull;
 
 public class WinDialog extends Dialog {
 
-
+    Button startAgainBtn;
+    TextView messageTxt;
     private final String message;
     private final MainActivity mainActivity;
     public WinDialog(@NonNull Context context, String message, MainActivity mainActivity) {
@@ -26,8 +27,8 @@ public class WinDialog extends Dialog {
 
         setContentView(R.layout.win_dialog);
 
-        final TextView messageTxt = findViewById(R.id.messageText);
-        final Button startAgainBtn = findViewById(R.id.startGameBtn);
+         messageTxt = findViewById(R.id.messageText);
+         startAgainBtn = findViewById(R.id.startAgainButton);
 
         messageTxt.setText(message);
 
